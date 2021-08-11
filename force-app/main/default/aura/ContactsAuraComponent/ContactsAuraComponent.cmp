@@ -1,0 +1,11 @@
+<aura:component controller="ContactsController">
+    <h1>Show Contacts Aura Component</h1>
+    <aura:attribute name="contacts" type="Contact[]"/>
+    <lighting:button varient="brand" label="Get Contacts"
+           title="Get Conatacts" onclick="{! c.jsgetContacts }" />
+<br/><br/>
+    <strong>Contacts</strong>
+    <aura:iteration items="{!v.contacts}" var="contact">
+          <li>{!contact.name}</li>
+    </aura:iteration>
+</aura:component>	
